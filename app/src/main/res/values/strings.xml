@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JetWeatherForecast</string>
+    <string name="splash_message">Find the Sun?</string>
+    <string name="desc_sun_icon">Sunny Icon</string>
 </resources>
