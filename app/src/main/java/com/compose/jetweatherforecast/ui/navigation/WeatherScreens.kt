@@ -1,4 +1,4 @@
-package com.compose.jetweatherforecast.ui.componets
+package com.compose.jetweatherforecast.ui.navigation
 
 enum class WeatherScreens {
     SplashScreen,
