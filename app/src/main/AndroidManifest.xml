@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetWeatherForecast">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.JetWeatherForecast">
             <intent-filter>
