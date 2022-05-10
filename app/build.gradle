@@ -5,6 +5,9 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+final String BASE_URL = "BASE_URL"
+final String API_KEY = "API_KEY"
+
 android {
     compileSdk 32
 
@@ -14,6 +17,8 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
+        buildConfigField "String", BASE_URL, '"http://api.openweathermap.org"'
+        buildConfigField "String", API_KEY, '"ed60fcfbd110ee65c7150605ea8aceea"'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
