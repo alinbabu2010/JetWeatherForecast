@@ -1,6 +1,5 @@
 package com.compose.jetweatherforecast.data.wrappers
 
-import com.compose.jetweatherforecast.data.model.ErrorModel
 import com.compose.jetweatherforecast.utils.Constants
 import java.io.IOException
 
@@ -17,29 +16,23 @@ data class Resource<out T>(
 
         fun <T> success(data: T): Resource<T> = Resource<T>(Status.SUCCESS, data)
 
-        fun <T> error(errorModel: ErrorModel?): Resource<T> {
-            val errorMessage = when (errorModel?.status) {
-                404 -> Constants.NOT_FOUND
-                500 -> Constants.SERVER_ERROR
-                else -> "${errorModel?.message}"
-            }
-            return Resource(Status.ERROR, message = errorMessage)
-        }
-
-        fun <T> failure(exception: Throwable): Resource<T> {
+        fun <T> error(exception: Throwable): Resource<T> {
             val message: String = if (exception is IOException) Constants.NETWORK_FAILURE
             else exception.message.toString()
             return Resource(Status.ERROR, message = message, exception = exception)
         }
 
-        fun <T> loading(): Resource<T> = Resource<T>(Status.LOADING)
+        fun <T> loading(): Resource<T> = Resource(Status.LOADING)
+
+        fun <T> empty(): Resource<T> = Resource(Status.EMPTY_RESPONSE)
 
     }
 
     enum class Status {
         SUCCESS,
         ERROR,
-        LOADING
+        LOADING,
+        EMPTY_RESPONSE
     }
 
 }
