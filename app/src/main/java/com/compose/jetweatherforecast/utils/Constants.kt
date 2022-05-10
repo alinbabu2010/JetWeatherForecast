@@ -10,5 +10,8 @@ object Constants {
 
     const val DEFAULT_UNIT = "imperial"
 
+    const val NOT_FOUND = "Location not found"
+    const val SERVER_ERROR = "Sorry, Server error occurred. Please try later"
+    const val NETWORK_FAILURE = "Network error occurred. Please try later"
 
 }
