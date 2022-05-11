@@ -13,6 +13,11 @@ class WeatherViewModel @Inject constructor(
     private val repository: WeatherRepository
 ) : ViewModel() {
 
+    /**
+     * To get weather details of a particular city from repository
+     * @param city City name for which weather details is needed
+     * @return An instance of [Resource] containing [Weather] object
+     */
     suspend fun getWeather(city: String): Resource<Weather> {
         return when (val response = repository.getWeather(city)) {
             is ResponseWrapper.Error -> Resource.error(response.exception)
