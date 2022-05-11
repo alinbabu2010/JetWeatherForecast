@@ -1,16 +1,15 @@
 package com.compose.jetweatherforecast.ui.screens
 
 import android.util.Log
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.produceState
 import androidx.navigation.NavHostController
 import com.compose.jetweatherforecast.data.model.Weather
 import com.compose.jetweatherforecast.data.wrappers.Resource
 import com.compose.jetweatherforecast.data.wrappers.Resource.Status.*
-import com.compose.jetweatherforecast.ui.theme.elevation5Dp
+import com.compose.jetweatherforecast.ui.theme.*
 import com.compose.jetweatherforecast.ui.viewmodels.WeatherViewModel
 import com.compose.jetweatherforecast.ui.widgets.WeatherAppBar
 import com.compose.jetweatherforecast.utils.Constants
@@ -40,7 +39,7 @@ fun MainScaffold(weather: Weather, navController: NavHostController) {
         WeatherAppBar(
             title = "${weather.city.name}, ${weather.city.country}",
             navController = navController,
-            elevation = elevation5Dp
+            elevation = mainTopBarElevation
         ) {
             Log.d("TAG", "MainScaffold: Button Clicked")
         }

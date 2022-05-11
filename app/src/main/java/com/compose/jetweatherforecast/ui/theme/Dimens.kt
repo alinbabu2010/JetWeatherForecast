@@ -3,16 +3,19 @@ package com.compose.jetweatherforecast.ui.theme
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-val dimenZeroDp = 0.dp
-
+/* Splash screen dimensions */
 val splashSurfaceSize = 330.dp
 val splashIconSize = 95.dp
+val splashColumnPadding = 1.dp
+val splashSurfacePadding = 15.dp
+val splashSurfaceBorderWidth = 2.dp
 
-val dimenBorderWidth = 2.dp
+/* Main screen surface dimensions*/
+val mainSurfacePadding = 4.dp
+val mainColumnPadding = 4.dp
+val mainDateTextPadding = 6.dp
+val mainTopBarElevation = 5.dp
 
-val dimenPadding1 = 1.dp
-val dimenPadding15 = 15.dp
-
-val elevation5Dp = 5.dp
-
-val dimenFontSize15 = 15.sp
+/* WeatherAppBar dimensions */
+val weatherAppBarTitleSize = 15.sp
+val weatherAppBarDefaultElevation = 0.dp

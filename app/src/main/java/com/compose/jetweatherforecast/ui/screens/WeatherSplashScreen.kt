@@ -51,16 +51,16 @@ fun WeatherSplashScreen(navController: NavHostController) {
 
     Surface(
         modifier = Modifier
-            .padding(dimenPadding15)
+            .padding(splashSurfacePadding)
             .size(splashSurfaceSize)
             .scale(scale.value),
         shape = CircleShape,
         color = Color.White,
-        border = BorderStroke(width = dimenBorderWidth, color = Color.LightGray)
+        border = BorderStroke(width = splashSurfaceBorderWidth, color = Color.LightGray)
     ) {
 
         Column(
-            modifier = Modifier.padding(dimenPadding1),
+            modifier = Modifier.padding(splashColumnPadding),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {

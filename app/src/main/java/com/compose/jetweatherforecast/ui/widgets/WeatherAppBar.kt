@@ -14,15 +14,15 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavController
-import com.compose.jetweatherforecast.ui.theme.dimenFontSize15
-import com.compose.jetweatherforecast.ui.theme.dimenZeroDp
+import com.compose.jetweatherforecast.ui.theme.weatherAppBarDefaultElevation
+import com.compose.jetweatherforecast.ui.theme.weatherAppBarTitleSize
 
 @Composable
 fun WeatherAppBar(
     title: String = "Title",
     icon: ImageVector? = null,
     isMainScreen: Boolean = true,
-    elevation: Dp = dimenZeroDp,
+    elevation: Dp = weatherAppBarDefaultElevation,
     navController: NavController,
     onAddActionClicked: () -> Unit = {},
     onButtonClicked: () -> Unit = {}
@@ -33,7 +33,7 @@ fun WeatherAppBar(
             Text(
                 text = title,
                 color = MaterialTheme.colors.onSecondary,
-                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = dimenFontSize15)
+                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = weatherAppBarTitleSize)
             )
         },
         backgroundColor = Color.Transparent,
