@@ -15,7 +15,11 @@ val mainSurfacePadding = 4.dp
 val mainColumnPadding = 4.dp
 val mainDateTextPadding = 6.dp
 val mainTopBarElevation = 5.dp
+val mainSurfaceSize = 200.dp
 
 /* WeatherAppBar dimensions */
 val weatherAppBarTitleSize = 15.sp
 val weatherAppBarDefaultElevation = 0.dp
+
+/* WeatherStateImage dimensions */
+val weatherStateImageSize = 80.dp
