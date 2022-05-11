@@ -26,7 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import com.compose.jetweatherforecast.R
 import com.compose.jetweatherforecast.ui.navigation.WeatherScreens
-import com.compose.jetweatherforecast.ui.theme.*
+import com.compose.jetweatherforecast.utils.*
 import kotlinx.coroutines.delay
 
 @Composable

@@ -14,13 +14,11 @@ import androidx.navigation.NavHostController
 import com.compose.jetweatherforecast.data.model.Weather
 import com.compose.jetweatherforecast.data.wrappers.Resource
 import com.compose.jetweatherforecast.data.wrappers.Resource.Status.*
-import com.compose.jetweatherforecast.ui.theme.*
+import com.compose.jetweatherforecast.ui.theme.Yellow100
 import com.compose.jetweatherforecast.ui.viewmodels.WeatherViewModel
 import com.compose.jetweatherforecast.ui.widgets.WeatherAppBar
 import com.compose.jetweatherforecast.ui.widgets.WeatherStateImage
-import com.compose.jetweatherforecast.utils.Constants
-import com.compose.jetweatherforecast.utils.formatDate
-import com.compose.jetweatherforecast.utils.formatDecimals
+import com.compose.jetweatherforecast.utils.*
 
 @Composable
 fun MainScreen(navController: NavHostController, weatherViewModel: WeatherViewModel) {

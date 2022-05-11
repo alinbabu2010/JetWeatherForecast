@@ -1,4 +1,4 @@
-package com.compose.jetweatherforecast.ui.theme
+package com.compose.jetweatherforecast.utils
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp

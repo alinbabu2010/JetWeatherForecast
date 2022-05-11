@@ -14,8 +14,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavController
-import com.compose.jetweatherforecast.ui.theme.weatherAppBarDefaultElevation
-import com.compose.jetweatherforecast.ui.theme.weatherAppBarTitleSize
+import com.compose.jetweatherforecast.utils.weatherAppBarDefaultElevation
+import com.compose.jetweatherforecast.utils.weatherAppBarTitleSize
 
 @Composable
 fun WeatherAppBar(
