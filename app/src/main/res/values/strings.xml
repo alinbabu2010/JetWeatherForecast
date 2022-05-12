@@ -2,4 +2,14 @@
     <string name="app_name">JetWeatherForecast</string>
     <string name="splash_message">Find the Sun?</string>
     <string name="desc_sun_icon">Sunny Icon</string>
+    <string name="image_url">https&#58;&#47;&#47;openweathermap.org&#47;img&#47;wn&#47;%s.png</string>
+    <string name="desc_search_icon">Search Icon</string>
+    <string name="desc_more_icon">More Icon</string>
+    <string name="desc_humidity_icon">Humidity Icon</string>
+    <string name="desc_pressure_icon">Pressure Icon</string>
+    <string name="desc_wind_icon">Wind Icon</string>
+    <string name="humidity_value">%d &#8453;</string>
+    <string name="pressure_value">%d psi</string>
+    <string name="wind_value">%.2f mph</string>
+    <string name="desc_weather_image">Weather Image</string>
 </resources>
