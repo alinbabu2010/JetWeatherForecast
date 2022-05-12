@@ -12,4 +12,6 @@
     <string name="pressure_value">%d psi</string>
     <string name="wind_value">%.2f mph</string>
     <string name="desc_weather_image">Weather Image</string>
+    <string name="desc_sunrise_icon">Sunrise icon</string>
+    <string name="desc_sunset_icon">Sunset icon</string>
 </resources>

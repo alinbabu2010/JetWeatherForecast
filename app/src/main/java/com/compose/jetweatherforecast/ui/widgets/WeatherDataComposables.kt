@@ -81,7 +81,7 @@ fun SunsetAndSunriseRow(weatherItem: WeatherItem) {
         Row(modifier = Modifier.padding(sunSetRiseDataRowPadding)) {
             Icon(
                 painter = painterResource(R.drawable.ic_sunrise),
-                contentDescription = "Sunrise icon",
+                contentDescription = stringResource(R.string.desc_sunrise_icon),
                 modifier = Modifier.size(sunSetRiseIconSize)
             )
             Text(
@@ -97,7 +97,7 @@ fun SunsetAndSunriseRow(weatherItem: WeatherItem) {
             )
             Icon(
                 painter = painterResource(R.drawable.ic_sunset),
-                contentDescription = "Sunset icon",
+                contentDescription = stringResource(R.string.desc_sunset_icon),
                 modifier = Modifier.size(sunSetRiseIconSize)
             )
         }
