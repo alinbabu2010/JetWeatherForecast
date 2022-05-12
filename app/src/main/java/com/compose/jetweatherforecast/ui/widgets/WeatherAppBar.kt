@@ -2,6 +2,7 @@ package com.compose.jetweatherforecast.ui.widgets
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
@@ -13,6 +14,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavController
 import com.compose.jetweatherforecast.R
@@ -35,7 +37,9 @@ fun WeatherAppBar(
             Text(
                 text = title,
                 color = MaterialTheme.colors.onSecondary,
-                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = weatherAppBarTitleSize)
+                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = weatherAppBarTitleSize),
+                modifier = if (isMainScreen) Modifier.fillMaxWidth() else Modifier,
+                textAlign = if (isMainScreen) TextAlign.Center else TextAlign.Start,
             )
         },
         backgroundColor = Color.Transparent,
