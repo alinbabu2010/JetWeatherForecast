@@ -23,3 +23,14 @@ val weatherAppBarDefaultElevation = 0.dp
 
 /* WeatherStateImage dimensions */
 val weatherStateImageSize = 80.dp
+
+/* HumidityWeatherPressureRow dimensions */
+val humidityWpRowPadding = 12.dp
+val humidityWpDataRowPadding = 4.dp
+val humidityWpIconSize = 20.dp
+
+/* SunsetSunriseRow dimensions */
+val sunSetRiseRowPaddingTop = 15.dp
+val sunSetRiseRowPaddingBottom = 6.dp
+val sunSetRiseDataRowPadding = 4.dp
+val sunSetRiseIconSize = 30.dp
