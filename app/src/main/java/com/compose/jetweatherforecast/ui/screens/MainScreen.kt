@@ -8,9 +8,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.produceState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavHostController
+import com.compose.jetweatherforecast.R
 import com.compose.jetweatherforecast.data.model.Weather
 import com.compose.jetweatherforecast.data.wrappers.Resource
 import com.compose.jetweatherforecast.data.wrappers.Resource.Status.*
@@ -60,8 +62,7 @@ fun MainContent(weather: Weather) {
 
     val weatherItem = weather.list.first()
     val weatherObject = weatherItem.weather.first()
-    val iconId = weatherObject.icon
-    val imageUrl = "https://openweathermap.org/img/wn/$iconId.png"
+    val imageUrl = stringResource(R.string.image_url, weatherObject.icon)
 
     Column(
         modifier = Modifier
@@ -103,6 +104,5 @@ fun MainContent(weather: Weather) {
         }
 
     }
-
 
 }

@@ -10,16 +10,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavController
+import com.compose.jetweatherforecast.R
 import com.compose.jetweatherforecast.utils.weatherAppBarDefaultElevation
 import com.compose.jetweatherforecast.utils.weatherAppBarTitleSize
 
 @Composable
 fun WeatherAppBar(
-    title: String = "Title",
+    title: String,
     icon: ImageVector? = null,
     isMainScreen: Boolean = true,
     elevation: Dp = weatherAppBarDefaultElevation,
@@ -49,10 +51,16 @@ fun WeatherAppBar(
         actions = {
             if (isMainScreen) {
                 IconButton(onClick = { }) {
-                    Icon(imageVector = Icons.Default.Search, contentDescription = "Search Icon")
+                    Icon(
+                        imageVector = Icons.Default.Search,
+                        contentDescription = stringResource(R.string.desc_search_icon)
+                    )
                 }
                 IconButton(onClick = { }) {
-                    Icon(imageVector = Icons.Default.MoreVert, contentDescription = "More Icon")
+                    Icon(
+                        imageVector = Icons.Default.MoreVert,
+                        contentDescription = stringResource(R.string.desc_more_icon)
+                    )
                 }
             } else Box() {
 
