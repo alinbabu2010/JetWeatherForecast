@@ -39,20 +39,14 @@ fun formatDateTime(timestamp: Int): String {
 }
 
 /**
- * To format decimals to string literal
+ * To format decimals to string literal and
+ * add degree symbol to end of string
  * @param item Decimal value to be formatted
  * @return The string literal
  */
-fun formatDecimals(item: Double): String {
-    return " %.0f".format(item)
+fun formatDecimalsWithDegreeSymbol(item: Double): String {
+    return " %.0f".format(item) + 0x00B0.toChar()
 }
-
-/**
- * To add degree symbol to end of string
- * @param text Text needed to add degree symbol
- * @return The formatted text
- */
-fun formatWithDegreeSymbol(text: String) = text + 0x00B0.toChar()
 
 /**
  * To get annotatedString for min and max temperature to display
@@ -67,7 +61,7 @@ fun getMinAndMaxWeatherTemp(temp: Temp) = buildAnnotatedString {
             fontWeight = FontWeight.SemiBold
         )
     ) {
-        append(formatWithDegreeSymbol(formatDecimals(temp.max)))
+        append(formatDecimalsWithDegreeSymbol(temp.max))
     }
 
     withStyle(
@@ -76,7 +70,7 @@ fun getMinAndMaxWeatherTemp(temp: Temp) = buildAnnotatedString {
             fontWeight = FontWeight.SemiBold
         )
     ) {
-        append(formatWithDegreeSymbol(formatDecimals(temp.min)))
+        append(formatDecimalsWithDegreeSymbol(temp.min))
     }
 
 }
