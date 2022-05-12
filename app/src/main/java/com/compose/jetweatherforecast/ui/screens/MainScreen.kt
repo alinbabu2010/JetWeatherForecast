@@ -18,6 +18,8 @@ import com.compose.jetweatherforecast.data.wrappers.Resource
 import com.compose.jetweatherforecast.data.wrappers.Resource.Status.*
 import com.compose.jetweatherforecast.ui.theme.Yellow100
 import com.compose.jetweatherforecast.ui.viewmodels.WeatherViewModel
+import com.compose.jetweatherforecast.ui.widgets.HumidityWindPressureRow
+import com.compose.jetweatherforecast.ui.widgets.SunsetAndSunriseRow
 import com.compose.jetweatherforecast.ui.widgets.WeatherAppBar
 import com.compose.jetweatherforecast.ui.widgets.WeatherStateImage
 import com.compose.jetweatherforecast.utils.*
@@ -102,6 +104,10 @@ fun MainContent(weather: Weather) {
             }
 
         }
+
+        HumidityWindPressureRow(weatherItem)
+        Divider()
+        SunsetAndSunriseRow(weatherItem)
 
     }
 
