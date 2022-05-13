@@ -17,4 +17,6 @@ object Constants {
     const val DATE_FORMAT = "EEE, MMM d"
     const val TIME_FORMAT = "hh:mm:aa"
 
+    const val NAV_ARG_CITY = "city"
+
 }

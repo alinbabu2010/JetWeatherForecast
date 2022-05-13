@@ -16,18 +16,23 @@ import com.compose.jetweatherforecast.R
 import com.compose.jetweatherforecast.data.model.Weather
 import com.compose.jetweatherforecast.data.wrappers.Resource
 import com.compose.jetweatherforecast.data.wrappers.Resource.Status.*
+import com.compose.jetweatherforecast.ui.navigation.WeatherScreens
 import com.compose.jetweatherforecast.ui.theme.Yellow100
 import com.compose.jetweatherforecast.ui.viewmodels.WeatherViewModel
 import com.compose.jetweatherforecast.ui.widgets.*
 import com.compose.jetweatherforecast.utils.*
 
 @Composable
-fun MainScreen(navController: NavHostController, weatherViewModel: WeatherViewModel) {
+fun MainScreen(
+    navController: NavHostController,
+    weatherViewModel: WeatherViewModel,
+    city: String?
+) {
 
     val weatherData = produceState<Resource<Weather?>>(
         initialValue = Resource.loading()
     ) {
-        value = weatherViewModel.getWeather(Constants.DEFAULT_CITY)
+        value = weatherViewModel.getWeather(city ?: "")
     }.value
 
     when (weatherData.status) {
@@ -46,6 +51,9 @@ fun MainScaffold(weather: Weather, navController: NavHostController) {
         WeatherAppBar(
             title = "${weather.city.name}, ${weather.city.country}",
             navController = navController,
+            onAddActionClicked = {
+                navController.navigate(WeatherScreens.SearchScreen.name)
+            },
             elevation = mainTopBarElevation
         ) {
             Log.d("TAG", "MainScaffold: Button Clicked")
