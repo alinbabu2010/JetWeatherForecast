@@ -19,6 +19,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavController
 import com.compose.jetweatherforecast.R
+import com.compose.jetweatherforecast.ui.navigation.WeatherScreens
 import com.compose.jetweatherforecast.utils.MenuItems
 import com.compose.jetweatherforecast.utils.dropDownColumnPaddingRight
 import com.compose.jetweatherforecast.utils.dropDownColumnPaddingTop
@@ -53,6 +54,13 @@ fun ShowDropDownMenu(showDialog: MutableState<Boolean>, navController: NavContro
                 }
 
                 DropdownMenuItem(onClick = {
+                    navController.navigate(
+                        when (menuItem) {
+                            MenuItems.About -> WeatherScreens.AboutScreen.name
+                            MenuItems.Favorites -> WeatherScreens.FavoriteScreen.name
+                            MenuItems.Settings -> WeatherScreens.SettingsScreen.name
+                        }
+                    )
                     showDialog.value = false
                 }) {
                     Icon(
