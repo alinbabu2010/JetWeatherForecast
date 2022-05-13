@@ -16,4 +16,7 @@
     <string name="desc_sunset_icon">Sunset icon</string>
     <string name="this_week">This week</string>
     <string name="desc_dropdown_icons">%s icon</string>
+    <string name="about">About</string>
+    <string name="weather_app_version">Weather App v%s</string>
+    <string name="weather_api_source">Weather API by:%s</string>
 </resources>
