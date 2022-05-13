@@ -20,6 +20,7 @@ val mainSurfaceSize = 200.dp
 /* WeatherAppBar dimensions */
 val weatherAppBarTitleSize = 15.sp
 val weatherAppBarDefaultElevation = 0.dp
+val weatherAppBarTitlePaddingEnd = 48.dp
 
 /* WeatherStateImage dimensions */
 val weatherStateImageSize = 80.dp

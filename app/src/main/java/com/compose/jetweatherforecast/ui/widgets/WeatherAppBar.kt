@@ -1,8 +1,8 @@
 package com.compose.jetweatherforecast.ui.widgets
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.navigation.NavController
 import com.compose.jetweatherforecast.R
 import com.compose.jetweatherforecast.utils.weatherAppBarDefaultElevation
+import com.compose.jetweatherforecast.utils.weatherAppBarTitlePaddingEnd
 import com.compose.jetweatherforecast.utils.weatherAppBarTitleSize
 
 @Composable
@@ -46,17 +47,22 @@ fun WeatherAppBar(
                 text = title,
                 color = MaterialTheme.colors.onSecondary,
                 style = TextStyle(fontWeight = FontWeight.Bold, fontSize = weatherAppBarTitleSize),
-                modifier = if (isMainScreen) Modifier.fillMaxWidth() else Modifier,
-                textAlign = if (isMainScreen) TextAlign.Center else TextAlign.Start,
+                modifier = if (isMainScreen) Modifier.fillMaxWidth() else Modifier
+                    .fillMaxWidth()
+                    .padding(end = weatherAppBarTitlePaddingEnd),
+                textAlign = TextAlign.Center,
             )
         },
         backgroundColor = Color.Transparent,
         navigationIcon = {
             if (icon != null) {
-                Icon(imageVector = icon,
-                    contentDescription = null,
-                    tint = MaterialTheme.colors.onSecondary,
-                    modifier = Modifier.clickable { onButtonClicked.invoke() })
+                IconButton(onClick = { onButtonClicked.invoke() }) {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = null,
+                        tint = MaterialTheme.colors.onSecondary
+                    )
+                }
             }
         },
         elevation = elevation,
