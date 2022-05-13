@@ -52,3 +52,8 @@ val outlineTextFieldPadding = 10.dp
 
 /* SearchScreen dimensions */
 val searchBarPadding = 16.dp
+
+/* DropdownMenu dimensions */
+val dropDownColumnPaddingTop = 45.dp
+val dropDownColumnPaddingRight = 20.dp
+val dropDownMenuWidth = 140.dp

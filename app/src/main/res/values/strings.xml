@@ -15,4 +15,5 @@
     <string name="desc_sunrise_icon">Sunrise icon</string>
     <string name="desc_sunset_icon">Sunset icon</string>
     <string name="this_week">This week</string>
+    <string name="desc_dropdown_icons">%s icon</string>
 </resources>
