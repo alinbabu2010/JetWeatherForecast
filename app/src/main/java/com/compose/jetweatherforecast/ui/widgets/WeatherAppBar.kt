@@ -54,13 +54,13 @@ fun WeatherAppBar(
         elevation = elevation,
         actions = {
             if (isMainScreen) {
-                IconButton(onClick = { }) {
+                IconButton(onClick = { onAddActionClicked.invoke() }) {
                     Icon(
                         imageVector = Icons.Default.Search,
                         contentDescription = stringResource(R.string.desc_search_icon)
                     )
                 }
-                IconButton(onClick = { }) {
+                IconButton(onClick = { onButtonClicked.invoke() }) {
                     Icon(
                         imageVector = Icons.Default.MoreVert,
                         contentDescription = stringResource(R.string.desc_more_icon)
