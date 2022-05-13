@@ -45,3 +45,10 @@ val detailRowSurfacePadding = 3.dp
 val detailRowSurfaceCornerSize = 6.dp
 val detailRowDataPadding = 6.dp
 val detailRowDescTextPadding = 4.dp
+
+/* CommonTextField dimensions */
+val outlineTextFieldCorner = 15.dp
+val outlineTextFieldPadding = 10.dp
+
+/* SearchScreen dimensions */
+val searchBarPadding = 16.dp

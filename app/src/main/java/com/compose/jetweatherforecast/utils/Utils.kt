@@ -74,3 +74,5 @@ fun getMinAndMaxWeatherTemp(temp: Temp) = buildAnnotatedString {
     }
 
 }
+
+fun String.validateText() = this.trim().isNotBlank()
