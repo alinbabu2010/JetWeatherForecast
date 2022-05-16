@@ -58,3 +58,12 @@ val searchBarPadding = 16.dp
 val dropDownColumnPaddingTop = 45.dp
 val dropDownColumnPaddingRight = 20.dp
 val dropDownMenuWidth = 140.dp
+
+/* Favorite screen dimensions */
+val favoriteSurfacePadding = 5.dp
+
+/* City Row dimensions */
+val cityRowSurfacePadding = 3.dp
+val cityRowSurfaceCorner = 6.dp
+val cityRowHeight = 50.dp
+val cityRowTextStartPadding = 4.dp
