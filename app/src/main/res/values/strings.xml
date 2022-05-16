@@ -19,4 +19,7 @@
     <string name="about">About</string>
     <string name="weather_app_version">Weather App v%s</string>
     <string name="weather_api_source">Weather API by:%s</string>
+    <string name="desc_favorite_icon">Favorite Icon</string>
+    <string name="favorite_cities">Favorite Cities</string>
+    <string name="desc_delete_icon">Delete Icon</string>
 </resources>
