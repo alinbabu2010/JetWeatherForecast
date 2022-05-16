@@ -5,6 +5,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
+import com.compose.jetweatherforecast.data.model.Favorite
 import com.compose.jetweatherforecast.data.model.Temp
 import java.text.SimpleDateFormat
 import java.util.*
@@ -25,7 +26,7 @@ fun formatDate(timestamp: Int): String {
  * @return Day for that timeStamp
  */
 fun formatDay(timestamp: Int): String {
-    return formatDate(timestamp).split(",").first()
+    return formatDate(timestamp).split(Constants.DELIMITER_COMMA).first()
 }
 
 /**
@@ -73,6 +74,16 @@ fun getMinAndMaxWeatherTemp(temp: Temp) = buildAnnotatedString {
         append(formatDecimalsWithDegreeSymbol(temp.min))
     }
 
+}
+
+/**
+ * To get [Favorite] object from provided title string
+ * @param title Title of the main screen
+ * @return An object of [Favorite]
+ */
+fun getFavoriteObject(title: String): Favorite {
+    val info = title.split(Constants.DELIMITER_COMMA)
+    return Favorite(info[0], info[1])
 }
 
 fun String.validateText() = this.trim().isNotBlank()
