@@ -19,4 +19,6 @@ object Constants {
 
     const val NAV_ARG_CITY = "city"
 
+    const val DELIMITER_COMMA = ","
+
 }
