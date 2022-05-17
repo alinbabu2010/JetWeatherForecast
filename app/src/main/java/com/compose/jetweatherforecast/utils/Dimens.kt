@@ -67,3 +67,11 @@ val cityRowSurfacePadding = 3.dp
 val cityRowSurfaceCorner = 6.dp
 val cityRowHeight = 50.dp
 val cityRowTextStartPadding = 4.dp
+
+/* Settings screen dimensions */
+val settingsTextPadding = 15.dp
+val settingsToggleButtonPadding = 5.dp
+val settingsButtonPadding = 3.dp
+val settingsButtonCorner = 34.dp
+val settingsButtonTextPadding = 4.dp
+val settingsButtonTextSize = 17.sp

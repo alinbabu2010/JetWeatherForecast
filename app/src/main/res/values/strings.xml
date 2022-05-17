@@ -22,4 +22,7 @@
     <string name="desc_favorite_icon">Favorite Icon</string>
     <string name="favorite_cities">Favorite Cities</string>
     <string name="desc_delete_icon">Delete Icon</string>
+    <string name="settings">Settings</string>
+    <string name="measurement_label">Change units of measurement</string>
+    <string name="save">Save</string>
 </resources>
