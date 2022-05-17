@@ -16,8 +16,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.navigation.NavController
+import com.compose.jetweatherforecast.R
 import com.compose.jetweatherforecast.ui.navigation.WeatherScreens
 import com.compose.jetweatherforecast.ui.widgets.CommonTextField
 import com.compose.jetweatherforecast.ui.widgets.WeatherAppBar
@@ -30,7 +32,7 @@ fun SearchScreen(navController: NavController) {
 
     Scaffold(topBar = {
         WeatherAppBar(
-            title = "Search",
+            title = stringResource(R.string.search),
             navController = navController,
             icon = Icons.Default.ArrowBack,
             isMainScreen = false

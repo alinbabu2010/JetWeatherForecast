@@ -27,6 +27,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.compose.jetweatherforecast.R
 import com.compose.jetweatherforecast.data.model.Favorite
+import com.compose.jetweatherforecast.ui.theme.Red600
 import com.compose.jetweatherforecast.ui.viewmodels.FavoriteViewModel
 import com.compose.jetweatherforecast.utils.getFavoriteObject
 import com.compose.jetweatherforecast.utils.weatherAppBarDefaultElevation
@@ -91,7 +92,7 @@ fun WeatherAppBar(
                             modifier = Modifier.scale(0.9f),
                             imageVector = Icons.Filled.Favorite,
                             contentDescription = stringResource(R.string.desc_favorite_icon),
-                            tint = Color.Red.copy(alpha = 0.6f)
+                            tint = Red600
                         )
                     }
                 }

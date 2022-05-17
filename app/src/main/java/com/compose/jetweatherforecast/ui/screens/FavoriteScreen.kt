@@ -15,7 +15,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -23,6 +22,7 @@ import androidx.navigation.NavController
 import com.compose.jetweatherforecast.R
 import com.compose.jetweatherforecast.data.model.Favorite
 import com.compose.jetweatherforecast.ui.navigation.WeatherScreens
+import com.compose.jetweatherforecast.ui.theme.Red300
 import com.compose.jetweatherforecast.ui.theme.Teal100
 import com.compose.jetweatherforecast.ui.theme.Teal50
 import com.compose.jetweatherforecast.ui.viewmodels.FavoriteViewModel
@@ -96,7 +96,7 @@ fun CityRow(
                     val route = "${WeatherScreens.MainScreen.name}/${favorite.city}"
                     navController.navigate(route)
                 },
-            verticalAlignment = Alignment.CenterVertically,
+            verticalAlignment = CenterVertically,
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
 
@@ -121,7 +121,7 @@ fun CityRow(
                 Icon(
                     imageVector = Icons.Rounded.Delete,
                     contentDescription = stringResource(R.string.desc_delete_icon),
-                    tint = Color.Red.copy(alpha = 0.3f)
+                    tint = Red300
                 )
             }
 

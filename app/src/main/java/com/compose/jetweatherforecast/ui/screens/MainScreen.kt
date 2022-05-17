@@ -1,6 +1,5 @@
 package com.compose.jetweatherforecast.ui.screens
 
-import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
@@ -55,9 +54,7 @@ fun MainScaffold(weather: Weather, navController: NavHostController) {
                 navController.navigate(WeatherScreens.SearchScreen.name)
             },
             elevation = mainTopBarElevation
-        ) {
-            Log.d("TAG", "MainScaffold: Button Clicked")
-        }
+        )
     }) {
         MainContent(weather)
     }
