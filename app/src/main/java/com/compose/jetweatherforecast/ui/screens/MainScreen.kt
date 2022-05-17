@@ -12,6 +12,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavHostController
 import com.compose.jetweatherforecast.R
+import com.compose.jetweatherforecast.WeatherApplication.Companion.temperatureUnit
 import com.compose.jetweatherforecast.data.model.Weather
 import com.compose.jetweatherforecast.data.wrappers.Resource
 import com.compose.jetweatherforecast.data.wrappers.Resource.Status.*
@@ -107,7 +108,7 @@ fun MainContent(weather: Weather) {
 
         }
 
-        HumidityWindPressureRow(weatherItem)
+        HumidityWindPressureRow(weatherItem, temperatureUnit)
         Divider()
         SunsetAndSunriseRow(weatherItem)
         Text(

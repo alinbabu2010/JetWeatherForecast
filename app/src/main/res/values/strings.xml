@@ -10,7 +10,8 @@
     <string name="desc_wind_icon">Wind Icon</string>
     <string name="humidity_value">%d &#8453;</string>
     <string name="pressure_value">%d psi</string>
-    <string name="wind_value">%.2f mph</string>
+    <string name="wind_value_mph">%.2f mph</string>
+    <string name="wind_value_mps">%.2f m/s</string>
     <string name="desc_weather_image">Weather Image</string>
     <string name="desc_sunrise_icon">Sunrise icon</string>
     <string name="desc_sunset_icon">Sunset icon</string>

@@ -14,7 +14,7 @@ import com.compose.jetweatherforecast.data.model.WeatherItem
 import com.compose.jetweatherforecast.utils.*
 
 @Composable
-fun HumidityWindPressureRow(weatherItem: WeatherItem) {
+fun HumidityWindPressureRow(weatherItem: WeatherItem, temperatureUnit: String) {
 
     Row(
         modifier = Modifier
@@ -33,7 +33,9 @@ fun HumidityWindPressureRow(weatherItem: WeatherItem) {
                 R.string.pressure_value,
                 weatherItem.pressure
             ),
-            WeatherMetrics.WIND to stringResource(R.string.wind_value, weatherItem.speed),
+            WeatherMetrics.WIND to if (temperatureUnit == Constants.UNIT_IMPERIAL)
+                stringResource(R.string.wind_value_mph, weatherItem.speed)
+            else stringResource(R.string.wind_value_mps, weatherItem.speed)
         )
 
         weatherData.forEach {
