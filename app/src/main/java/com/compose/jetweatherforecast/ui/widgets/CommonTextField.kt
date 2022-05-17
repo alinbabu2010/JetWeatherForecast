@@ -29,7 +29,7 @@ fun CommonTextField(
     OutlinedTextField(
         value = valueState.value,
         onValueChange = { valueState.value = it },
-        label = { Text(text = placeHolder) },
+        placeholder = { Text(text = placeHolder) },
         maxLines = 1,
         singleLine = true,
         keyboardOptions = KeyboardOptions(
