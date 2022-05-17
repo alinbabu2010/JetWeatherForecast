@@ -1,6 +1,7 @@
 package com.compose.jetweatherforecast.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
+import com.compose.jetweatherforecast.WeatherApplication.Companion.temperatureUnit
 import com.compose.jetweatherforecast.data.model.Weather
 import com.compose.jetweatherforecast.data.repository.WeatherRepository
 import com.compose.jetweatherforecast.data.wrappers.Resource
@@ -19,7 +20,7 @@ class WeatherViewModel @Inject constructor(
      * @return An instance of [Resource] containing [Weather] object
      */
     suspend fun getWeather(city: String): Resource<Weather> {
-        return when (val response = repository.getWeather(city)) {
+        return when (val response = repository.getWeather(city, temperatureUnit)) {
             is ResponseWrapper.Error -> Resource.error(response.exception)
             is ResponseWrapper.Success -> {
                 if (response.data != null) Resource.success(response.data)

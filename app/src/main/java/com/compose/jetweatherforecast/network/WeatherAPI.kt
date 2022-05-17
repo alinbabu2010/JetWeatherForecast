@@ -13,7 +13,7 @@ interface WeatherAPI {
     @GET(Constants.WEATHER_ENDPOINT)
     suspend fun getWeather(
         @Query(Constants.PARAM_QUERY) query: String,
-        @Query(Constants.PARAM_UNITS) units: String = Constants.DEFAULT_UNIT,
+        @Query(Constants.PARAM_UNITS) units: String,
         @Query(Constants.PARAM_APPID) appId: String = BuildConfig.API_KEY
     ): Weather
 
