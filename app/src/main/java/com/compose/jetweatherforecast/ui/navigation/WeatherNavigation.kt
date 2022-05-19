@@ -1,21 +1,44 @@
 package com.compose.jetweatherforecast.ui.navigation
 
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.unit.IntOffset
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavType
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.compose.jetweatherforecast.ui.screens.*
 import com.compose.jetweatherforecast.ui.viewmodels.WeatherViewModel
 import com.compose.jetweatherforecast.utils.Constants
+import com.google.accompanist.navigation.animation.AnimatedNavHost
+import com.google.accompanist.navigation.animation.composable
+import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 
+@ExperimentalAnimationApi
 @Composable
 fun WeatherNavigation() {
 
-    val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = WeatherScreens.SplashScreen.name){
+    val navController = rememberAnimatedNavController()
+    val springSpec = spring<IntOffset>(dampingRatio = 2F)
+
+    AnimatedNavHost(
+        navController = navController,
+        startDestination = WeatherScreens.SplashScreen.name,
+        enterTransition = {
+            slideInHorizontally(initialOffsetX = { 1000 }, animationSpec = springSpec)
+        },
+        exitTransition = {
+            slideOutHorizontally(targetOffsetX = { -1000 }, animationSpec = springSpec)
+        },
+        popEnterTransition = {
+            slideInHorizontally(initialOffsetX = { -1000 }, animationSpec = springSpec)
+        },
+        popExitTransition = {
+            slideOutHorizontally(targetOffsetX = { 1000 }, animationSpec = springSpec)
+        }
+    ) {
 
         // Splash Screen navigation
         composable(WeatherScreens.SplashScreen.name) {

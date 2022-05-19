@@ -3,6 +3,7 @@ package com.compose.jetweatherforecast.ui.activities
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,6 +17,7 @@ import com.compose.jetweatherforecast.ui.navigation.WeatherNavigation
 import com.compose.jetweatherforecast.ui.theme.JetWeatherForecastTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+@ExperimentalAnimationApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
@@ -27,10 +29,10 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-    
+
 }
 
-
+@ExperimentalAnimationApi
 @Composable
 fun WeatherApp(){
     // A surface container using the 'background' color from the theme
@@ -50,6 +52,7 @@ fun WeatherApp(){
 }
 
 @Preview(showBackground = true)
+@ExperimentalAnimationApi
 @Composable
 fun DefaultPreview() {
     JetWeatherForecastTheme {
